@@ -1,0 +1,13 @@
+Info* reverse_Node()
+{
+    Info* p = head, *pre = NULL, *cur = NULL;
+    pre = p;
+    pre -> next = cur;
+    while (p != NULL) {
+        pre = p;
+        p = p -> next;
+        cur = p;
+        if (cur != NULL)cur -> next = pre;
+    }
+    return pre;
+}
